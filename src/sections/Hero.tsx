@@ -57,13 +57,14 @@ export default function Hero() {
             width={72}
             height={72}
             priority
+            unoptimized
             className="animate-float-slow drop-shadow-[0_0_30px_rgba(0,174,239,0.5)]"
           />
         </motion.div>
 
         <motion.h1
           variants={fadeUp}
-          className="text-balance font-display text-[16vw] leading-[0.9] tracking-wide text-white sm:text-[9vw] lg:text-[7.5rem]"
+          className="text-balance font-gothic text-[15vw] leading-[0.95] tracking-wide text-white [text-shadow:0_0_40px_rgba(0,174,239,0.35)] sm:text-[8vw] lg:text-[6.5rem]"
         >
           NAR<span className="text-gradient-electric">TATTOO</span>
         </motion.h1>

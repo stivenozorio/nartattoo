@@ -22,6 +22,9 @@ export default function GalleryTile({ image, index }: { image: GalleryImage; ind
         alt={image.alt}
         width={800}
         height={800}
+        // Placeholder gallery art is SVG — Next's optimizer 400s on local SVGs
+        // unless dangerouslyAllowSVG is set. Real photos (jpg/webp) get optimized normally.
+        unoptimized={image.src.endsWith(".svg")}
         sizes="(min-width: 1024px) 32vw, (min-width: 640px) 46vw, 92vw"
         className="h-auto w-full scale-100 object-cover transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.06]"
       />

@@ -1,14 +1,29 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none" role="img" aria-labelledby="markTitle">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 140" fill="none" role="img" aria-labelledby="markTitle">
   <title id="markTitle">NARTATTOO</title>
   <defs>
-    <linearGradient id="markGrad" x1="0" y1="0" x2="120" y2="120" gradientUnits="userSpaceOnUse">
+    <linearGradient id="markGrad" x1="10" y1="20" x2="110" y2="120" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#EAF9FF"/>
       <stop offset="0.45" stop-color="#00AEEF"/>
       <stop offset="1" stop-color="#0E6FB8"/>
     </linearGradient>
+    <linearGradient id="markFill" x1="10" y1="20" x2="110" y2="120" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0E6FB8"/>
+      <stop offset="1" stop-color="#00AEEF"/>
+    </linearGradient>
   </defs>
-  <rect x="1" y="1" width="118" height="118" rx="10" fill="#050505" stroke="url(#markGrad)" stroke-width="1.5"/>
-  <path d="M60 14 L106 60 L60 106 L14 60 Z" fill="none" stroke="url(#markGrad)" stroke-width="1.5" opacity="0.55"/>
-  <path d="M40 78 V42 L48 42 L64 68 V42 L72 42 V78 L64 78 L48 52 V78 Z" fill="url(#markGrad)"/>
-  <path d="M70 78 L82 42 H90 L102 78 H93.5 L91.5 71 H80.5 L78.5 78 Z M83 63 H89 L86 51 Z" fill="url(#markGrad)"/>
+
+  <!-- top flourish -->
+  <path d="M60 4 C58 12 52 14 48 12 C52 20 58 20 60 26 C62 20 68 20 72 12 C68 14 62 12 60 4 Z" fill="url(#markGrad)" opacity="0.9"/>
+
+  <!-- diamond frame -->
+  <path d="M60 26 L104 70 L60 114 L16 70 Z" fill="#050505" stroke="url(#markGrad)" stroke-width="2"/>
+  <path d="M60 34 L96 70 L60 106 L24 70 Z" fill="url(#markFill)" opacity="0.16"/>
+  <path d="M60 38 L92 70 L60 102 L28 70 Z" fill="none" stroke="url(#markGrad)" stroke-width="1" opacity="0.7"/>
+
+  <!-- interlocked N + A monogram -->
+  <path d="M42 88 V54 L48 54 L64 78 V54 L70 54 V88 L64 88 L48 64 V88 Z" fill="url(#markGrad)"/>
+  <path d="M64 88 L76 54 H82 L94 88 H87.5 L85.6 82 H72.4 L70.5 88 Z M74.8 76 H83.2 L79 62.5 Z" fill="url(#markGrad)"/>
+
+  <!-- bottom flourish -->
+  <path d="M60 136 C58 128 52 126 48 128 C52 120 58 120 60 114 C62 120 68 120 72 128 C68 126 62 128 60 136 Z" fill="url(#markGrad)" opacity="0.9"/>
 </svg>

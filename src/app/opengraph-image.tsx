@@ -46,7 +46,7 @@ export default function OpengraphImage() {
               color: "#00aeef",
             }}
           >
-            NT
+            NA
           </div>
         </div>
         <div

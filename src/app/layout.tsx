@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Bebas_Neue, Inter } from "next/font/google";
+import { Bebas_Neue, Inter, Pirata_One } from "next/font/google";
 import "./globals.css";
 
 import { siteMetadata } from "@/lib/metadata";
@@ -25,6 +25,15 @@ const bebasNeue = Bebas_Neue({
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
+  display: "swap",
+});
+
+// Used only for the NARTATTOO wordmark/logo lockup, to echo the brand's
+// ornate gothic-blackletter identity — section headings keep Bebas Neue.
+const pirataOne = Pirata_One({
+  subsets: ["latin"],
+  weight: "400",
+  variable: "--font-gothic-src",
   display: "swap",
 });
 
@@ -57,7 +66,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es" className={`${bebasNeue.variable} ${inter.variable}`}>
+    <html lang="es" className={`${bebasNeue.variable} ${inter.variable} ${pirataOne.variable}`}>
       <head>
         <script
           type="application/ld+json"

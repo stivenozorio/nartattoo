@@ -8,5 +8,5 @@
   </defs>
   <rect width="32" height="32" rx="7" fill="#050505"/>
   <path d="M16 3 L29 16 L16 29 L3 16 Z" fill="none" stroke="url(#g)" stroke-width="1.4"/>
-  <text x="16" y="21" text-anchor="middle" font-family="Arial, sans-serif" font-weight="700" font-size="13" fill="url(#g)">NT</text>
+  <text x="16" y="21" text-anchor="middle" font-family="Arial, sans-serif" font-weight="700" font-size="12" fill="url(#g)">NA</text>
 </svg>

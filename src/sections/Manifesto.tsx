@@ -35,6 +35,7 @@ export default function Manifesto() {
             alt="Detalle de diseño NARTATTOO"
             width={140}
             height={140}
+            unoptimized
             className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 opacity-90 drop-shadow-[0_0_50px_rgba(0,174,239,0.45)]"
           />
           <motion.div

@@ -51,7 +51,7 @@ export function renderAppIcon(size: number, padding = 0.08) {
                 fontFamily: "sans-serif",
               }}
             >
-              NT
+              NA
             </div>
           </div>
         </div>
