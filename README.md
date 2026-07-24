@@ -56,15 +56,14 @@ npm start
 
 ### Logo
 
-El proyecto usa un logo placeholder (monograma "NT" en diamante) en:
+El proyecto usa el logo real de NARTATTOO, extraído del archivo `.ai` provisto y exportado a `public/logo/`:
 
-- `public/logo/nartattoo-mark.svg` — ícono/mark usado en el header, footer y hero.
+- `nartattoo-mark.png` — el monograma "NA" en diamante (transparente), usado en el header, footer y la tarjeta de la sección "Manifiesto".
+- `nartattoo-mark-icon.png` — versión más liviana del monograma, usada solo para generar los íconos de la PWA/favicon.
+- `nartattoo-lockup.png` — el lockup completo (wordmark gótico + diamante + orlas), fondo negro, usado como pieza central del Hero.
+- `nartattoo-lockup-og.png` — versión liviana del lockup, usada solo en la imagen de Open Graph.
 
-Para usar el logo real de NARTATTOO:
-
-1. Reemplaza `public/logo/nartattoo-mark.svg` por tu archivo (idealmente SVG o PNG con fondo transparente).
-2. Si usas PNG, actualiza la referencia en `src/components/Logo.tsx` y `src/sections/Hero.tsx` (cambia `.svg` por `.png` y ajusta `width`/`height`).
-3. Actualiza también los íconos de la PWA y el favicon (ver sección "Iconos y PWA" abajo).
+Para reemplazar el logo por una versión nueva, basta con sobrescribir estos 4 archivos (manteniendo los nombres) con las mismas proporciones aproximadas — no hace falta tocar el código. Si cambian mucho las proporciones, ajusta los `width`/`height` en `src/components/Logo.tsx`, `src/sections/Hero.tsx` y `src/sections/Manifesto.tsx`.
 
 ### Fondo del Hero
 
@@ -84,15 +83,15 @@ Para usar fotos reales:
 
 ### Iconos y PWA
 
-Los íconos de la app (favicon, apple-touch-icon, íconos del manifest 192/512/maskable) y la imagen de Open Graph se generan por código con `next/og` en:
+Los íconos de la app (favicon, apple-touch-icon, íconos del manifest 192/512/maskable) y la imagen de Open Graph se generan por código con `next/og`, embebiendo el monograma real (`nartattoo-mark-icon.png` / `nartattoo-lockup-og.png`) como imagen dentro del `ImageResponse`:
 
-- `src/app/icon.svg` — favicon (SVG estático).
+- `src/app/icon.tsx` — favicon.
 - `src/app/apple-icon.tsx` — ícono para iOS.
 - `src/app/icons/icon-192/route.tsx`, `icon-512/route.tsx`, `icon-maskable-512/route.tsx` — íconos del manifest PWA.
 - `src/app/opengraph-image.tsx` — imagen para compartir en redes sociales.
-- `src/lib/appIcon.tsx` — diseño base reutilizado por los íconos anteriores.
+- `src/lib/appIcon.tsx` — lee `nartattoo-mark-icon.png` del disco y lo reutilizan todos los íconos anteriores.
 
-Para usar el logo real en todos estos lugares, edita `src/lib/appIcon.tsx` (y el diseño de `opengraph-image.tsx`) reemplazando el bloque `NT` por tu logo (puedes usar una imagen embebida en base64 dentro del JSX que usa `ImageResponse`, ya que estas rutas no pueden usar `next/image`).
+Estas rutas corren en el runtime Node.js (no edge) porque leen el archivo del disco con `fs.readFileSync`. Si reemplazas el logo, solo necesitas sobrescribir `public/logo/nartattoo-mark-icon.png` y `nartattoo-lockup-og.png` — no hay que tocar este código.
 
 ## Cómo modificar textos
 

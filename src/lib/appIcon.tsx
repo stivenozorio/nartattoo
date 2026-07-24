@@ -1,10 +1,23 @@
+import { readFileSync } from "node:fs";
+import { join } from "node:path";
 import { ImageResponse } from "next/og";
 
+let cachedDataUri: string | null = null;
+
+/** Reads the real diamond-mark artwork once and caches it as a data URI for embedding in ImageResponse. */
+function getMarkDataUri() {
+  if (!cachedDataUri) {
+    const file = readFileSync(join(process.cwd(), "public", "logo", "nartattoo-mark-icon.png"));
+    cachedDataUri = `data:image/png;base64,${file.toString("base64")}`;
+  }
+  return cachedDataUri;
+}
+
 /**
- * Renders the NARTATTOO diamond monogram as a PWA/app icon using next/og.
+ * Renders the real NARTATTOO diamond monogram as a PWA/app icon.
  * `padding` (0-1) reserves safe-zone margin for maskable icons.
  */
-export function renderAppIcon(size: number, padding = 0.08) {
+export function renderAppIcon(size: number, padding = 0.1) {
   const inner = Math.round(size * (1 - padding * 2));
 
   return new ImageResponse(
@@ -19,42 +32,8 @@ export function renderAppIcon(size: number, padding = 0.08) {
           background: "#050505",
         }}
       >
-        <div
-          style={{
-            width: inner,
-            height: inner,
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            borderRadius: inner * 0.22,
-            background: "linear-gradient(135deg, #0e6fb8 0%, #00aeef 55%, #eaf9ff 100%)",
-          }}
-        >
-          <div
-            style={{
-              width: inner * 0.86,
-              height: inner * 0.86,
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              borderRadius: inner * 0.18,
-              background: "#050505",
-            }}
-          >
-            <div
-              style={{
-                display: "flex",
-                fontSize: inner * 0.42,
-                fontWeight: 700,
-                letterSpacing: -2,
-                color: "#00aeef",
-                fontFamily: "sans-serif",
-              }}
-            >
-              NA
-            </div>
-          </div>
-        </div>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src={getMarkDataUri()} width={inner} height={inner} alt="" />
       </div>
     ),
     { width: size, height: size }

@@ -31,11 +31,10 @@ export default function Manifesto() {
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(0,174,239,0.25),transparent_55%)]" />
           <div className="absolute inset-0 bg-gradient-to-br from-ink-soft via-graphite to-ink" />
           <Image
-            src="/logo/nartattoo-mark.svg"
+            src="/logo/nartattoo-mark.png"
             alt="Detalle de diseño NARTATTOO"
-            width={140}
-            height={140}
-            unoptimized
+            width={180}
+            height={180}
             className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 opacity-90 drop-shadow-[0_0_50px_rgba(0,174,239,0.45)]"
           />
           <motion.div

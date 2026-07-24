@@ -50,24 +50,16 @@ export default function Hero() {
         animate="visible"
         className="relative z-10 flex flex-col items-center px-6 text-center"
       >
-        <motion.div variants={fadeIn} className="mb-8">
+        <motion.div variants={fadeIn} className="mb-2">
           <Image
-            src="/logo/nartattoo-mark.svg"
+            src="/logo/nartattoo-lockup.png"
             alt="NARTATTOO"
-            width={72}
-            height={72}
+            width={720}
+            height={509}
             priority
-            unoptimized
-            className="animate-float-slow drop-shadow-[0_0_30px_rgba(0,174,239,0.5)]"
+            className="h-auto w-[86vw] max-w-[640px] drop-shadow-[0_0_45px_rgba(0,174,239,0.4)] sm:w-[70vw]"
           />
         </motion.div>
-
-        <motion.h1
-          variants={fadeUp}
-          className="text-balance font-gothic text-[15vw] leading-[0.95] tracking-wide text-white [text-shadow:0_0_40px_rgba(0,174,239,0.35)] sm:text-[8vw] lg:text-[6.5rem]"
-        >
-          NAR<span className="text-gradient-electric">TATTOO</span>
-        </motion.h1>
 
         <motion.p
           variants={fadeUp}

@@ -1,7 +1,5 @@
 import { renderAppIcon } from "@/lib/appIcon";
 
-export const runtime = "edge";
-
 export function GET() {
-  return renderAppIcon(192, 0.06);
+  return renderAppIcon(192, 0.08);
 }
