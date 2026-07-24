@@ -1,0 +1,32 @@
+{
+  "name": "nartattoo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "NARTATTOO — Estudio de tatuajes premium. Tu piel, tu historia, una obra de arte.",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "next": "15.5.21",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "framer-motion": "12.42.2",
+    "lucide-react": "1.26.0",
+    "clsx": "2.1.1",
+    "tailwind-merge": "3.6.0"
+  },
+  "devDependencies": {
+    "typescript": "5.9.3",
+    "@types/node": "22.14.1",
+    "@types/react": "19.2.17",
+    "@types/react-dom": "19.2.3",
+    "@tailwindcss/postcss": "4.3.3",
+    "tailwindcss": "4.3.3",
+    "eslint": "9.24.0",
+    "eslint-config-next": "15.5.21",
+    "@eslint/eslintrc": "3.3.1"
+  }
+}

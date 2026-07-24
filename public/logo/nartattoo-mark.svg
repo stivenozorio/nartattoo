@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none" role="img" aria-labelledby="markTitle">
+  <title id="markTitle">NARTATTOO</title>
+  <defs>
+    <linearGradient id="markGrad" x1="0" y1="0" x2="120" y2="120" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#EAF9FF"/>
+      <stop offset="0.45" stop-color="#00AEEF"/>
+      <stop offset="1" stop-color="#0E6FB8"/>
+    </linearGradient>
+  </defs>
+  <rect x="1" y="1" width="118" height="118" rx="10" fill="#050505" stroke="url(#markGrad)" stroke-width="1.5"/>
+  <path d="M60 14 L106 60 L60 106 L14 60 Z" fill="none" stroke="url(#markGrad)" stroke-width="1.5" opacity="0.55"/>
+  <path d="M40 78 V42 L48 42 L64 68 V42 L72 42 V78 L64 78 L48 52 V78 Z" fill="url(#markGrad)"/>
+  <path d="M70 78 L82 42 H90 L102 78 H93.5 L91.5 71 H80.5 L78.5 78 Z M83 63 H89 L86 51 Z" fill="url(#markGrad)"/>
+</svg>
